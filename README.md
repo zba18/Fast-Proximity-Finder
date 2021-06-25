@@ -8,6 +8,7 @@ Need to have Redis running on localhost with default port (6379)
 2. `pip install -r "requirements.txt"`
 3. `uvicorn main:app`
 
+Endpoints:
 1. `/add_job`
 2. `/find_jobs`
 3. `/edit_job`
