@@ -14,3 +14,7 @@ Endpoints:
 3. `/edit_job`
 
 instructions on endpoints available at http://127.0.0.1:8000/docs 
+
+notes on redis: 
+1. `CONFIG GET dir` to know where the dump file is. (Persistence)
+2. `CONFIG SET appendfsync always` to keep all data safe
