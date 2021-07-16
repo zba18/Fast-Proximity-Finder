@@ -1,0 +1,12 @@
+tasks:
+  - name: Dependencies 
+    init: |
+      sudo add-apt-repository ppa:redislabs/redis
+      sudo apt-get update
+      sudo apt-get install redis
+      sudo apt-get install python3.8
+  - name: Virtual Environment setup
+    init: python3 -m venv virtual_env_3.8
+  - name: Enter Virtual Environment 
+    before: source /virtual_env_3.8/bin/activate # need to still add running redis-server
+    
