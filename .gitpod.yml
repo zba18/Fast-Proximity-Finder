@@ -6,7 +6,9 @@ tasks:
       sudo apt-get install redis
       sudo apt-get install python3.8
   - name: Virtual Environment setup
-    init: python3 -m venv virtual_env_3.8
+    init: python -m venv virtual_env_3.8
   - name: Enter Virtual Environment 
-    before: source /virtual_env_3.8/bin/activate # need to still add running redis-server
+    command: source virtual_env_3.8/bin/activate # need to still add running redis-server
+  - name: download pip dependencies
+    command: pip install -r "requirements.txt"
     
