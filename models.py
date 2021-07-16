@@ -8,6 +8,11 @@ class AddJobRequest(BaseModel):
     id_: int 
     lat: float
     lng: float
+
+class DelJobRequest(BaseModel):
+    id_: int 
+    lat: float
+    lng: float
         
 class EditJobRequest(BaseModel):
     id_: int 
@@ -16,3 +21,10 @@ class EditJobRequest(BaseModel):
     lat_new: float
     lng_new: float
         
+
+class AnalyticsRequest(BaseModel):
+	feed: int
+	impressions: Optional[List[int]]
+	views: Optional[List[int]]
+	saves: Optional[List[int]]
+	applies: Optional[List[int]]
