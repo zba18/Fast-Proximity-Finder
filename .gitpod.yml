@@ -1,0 +1,18 @@
+tasks:
+  - name: Dependencies 
+    init: |
+      sudo add-apt-repository ppa:redislabs/redis
+      sudo apt-get update
+      sudo apt-get install -y redis
+      
+  - name: Virtual Environment setup
+    init: |
+      sudo apt-get install -y python3.8
+      python -m venv venv38 -system-site-packages
+      source venv38/bin/activate
+      pip install -r "requirements.txt"
+    
+  - name: run redis
+    command: redis-server
+  - name: run FastAPI
+    command: uvicorn main:app
