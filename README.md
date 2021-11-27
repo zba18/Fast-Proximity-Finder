@@ -1,5 +1,5 @@
 # Fast Proximity Finder
-Built in python with (Uber's H3 Geohashing Library)[https://github.com/uber/h3]
+Built in python with [Uber's H3 Geohashing Library](https://github.com/uber/h3)
 
 ## To run: 
 
