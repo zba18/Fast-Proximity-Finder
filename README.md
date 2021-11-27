@@ -1,4 +1,5 @@
-# h3-clean
+# Fast Proximity Finder
+Built in python with (Uber's H3 Geohashing Library)[https://github.com/uber/h3]
 
 ## To run: 
 
@@ -9,10 +10,12 @@ Need to have Redis running on localhost with default port (6379)
 3. `uvicorn main:app`
 
 Endpoints:
-1. `/add_job`
-2. `/find_jobs`
-3. `/edit_job`
+1. `/add_location`
+2. `/find_nearby_locations`
+3. `/delete_location`
 
+
+### Deprec
 instructions on endpoints available at http://127.0.0.1:8000/docs 
 
 notes on redis: 
